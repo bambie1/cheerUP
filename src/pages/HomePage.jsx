@@ -1,21 +1,20 @@
 import React from "react";
-import { Page, Button } from "../styled-components";
+import { Button } from "../styled-components";
 import { Link } from "react-router-dom";
-import illustration from "../assets/smiley_illustration.svg";
-import { Img } from "../styled-components";
+import illustration from "../assets/undraw_i_can_fly.svg";
 
 const HomePage = () => {
   return (
-    <Page>
-      <div className="page-content">
-        <h2>Cheer-Up</h2>
-        <p>Just the right quotes for whatever you're feeling</p>
-        <Button>
-          <Link to="/categories">Get Inspired</Link>
-        </Button>
-        <Img id="home-illustration" src={illustration} alt="illst" />
+    <div className="page home">
+      <img className="home-illustration" src={illustration} alt="illst" />
+      <div id="home-content">
+        <h2 className="heading">Cheer-Up!</h2>
+        <p className="sub-heading">Just the right quotes to give you a lift!</p>
+        <Link to="/categories">
+          <Button>Get Inspired</Button>
+        </Link>
       </div>
-    </Page>
+    </div>
   );
 };
 

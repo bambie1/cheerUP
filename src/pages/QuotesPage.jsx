@@ -22,7 +22,7 @@ const QuotesPage = () => {
   }, [category]);
 
   return (
-    <div className="page-content">
+    <div className="page-content page">
       <h1>Quotes</h1>
       <Button>
         <Link to="/categories">Back</Link>

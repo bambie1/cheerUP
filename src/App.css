@@ -1,5 +1,132 @@
+:root {
+  --primary: #f2f2f2;
+  --secondary: #5f4b8b;
+  --tertiary: #e69a8d;
+}
 .App {
-  border: 1px solid grey;
-  padding: 5px;
-  min-height: 90vh;
+  display: flex;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.heading {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-size: 36px;
+  text-shadow: 1px 0px #e3988d;
+  line-height: 44px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+      180deg,
+      var(--tertiary) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    var(--secondary);
+}
+.home {
+  justify-content: flex-end;
+  padding: 0px 20px;
+  align-items: center;
+}
+.search {
+  padding: 5px 10px;
+  text-align: center;
+}
+.home-illustration {
+  width: 100%;
+  max-width: 327px;
+  animation: fadein 2s;
+}
+#home-content {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  word-break: break-word;
+  text-align: center;
+  color: var(--primary);
+}
+.brand-name {
+  font-size: 26px;
+  /* background: -webkit-linear-gradient(var(--secondary), var(--tertiary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  color: var(--secondary);
+  font-family: "Montserrat", sans-serif;
+}
+.navbar {
+  margin-bottom: 3vh;
+}
+input {
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 1px 2px 4px #e69a8d;
+  border-radius: 10px;
+  line-height: 20px;
+  padding: 10px;
+  border: none;
+  font-family: "Lora", "serif";
+  display: block;
+  margin: 0px auto;
+  width: 70%;
+  max-width: 400px;
+  font-size: 2vh;
+}
+input:focus {
+  outline: none;
+  box-shadow: 0px 0px 3pt 2pt #d9cfd8;
+}
+.content {
+  margin: auto;
+  /* max-width: 650px; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#search-content {
+  margin-bottom: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .home {
+    flex-direction: row-reverse;
+  }
+  .home-illustration {
+    max-width: 450px;
+    width: 50%;
+  }
+  #home-content {
+    width: 50%;
+    /* margin-top: 74px; */
+  }
+  .content {
+    flex-direction: row;
+    width: 80%;
+  }
+  #search-content {
+    margin-right: 30px;
+    margin-bottom: 0px;
+  }
+}
+.error-msg {
+  color: red;
+  font-size: 0.9rem;
+  display: none;
+}
+.error-msg.display {
+  display: block;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

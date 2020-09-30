@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Button } from "../styled-components";
+import { CatCard } from "../styled-components";
 import { QuoteContext } from "../contextAPI/QuoteContext";
 
 const Category = ({ title, apiCategory }) => {
@@ -9,7 +9,7 @@ const Category = ({ title, apiCategory }) => {
 
   return (
     <>
-      <Button
+      <CatCard
         onClick={() => {
           setCategory({
             title,
@@ -18,7 +18,7 @@ const Category = ({ title, apiCategory }) => {
         }}
       >
         {title}
-      </Button>
+      </CatCard>
     </>
   );
 };
